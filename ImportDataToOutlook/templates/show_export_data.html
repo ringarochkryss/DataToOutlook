@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Data för export: {{ export.name }}</h2>
+<table border="1">
+    <tr>
+        <th>Starttid</th>
+        <th>Sluttid</th>
+        <th>Aktivitet</th>
+        <th>Ämne</th>
+        <th>Venue</th>
+        <th>Status</th>
+        <th>Källa</th>
+    </tr>
+    {% for row in rows %}
+    <tr>
+        <td>{{ row.starttime }}</td>
+        <td>{{ row.endtime }}</td>
+        <td>{{ row.activityname }}</td>
+        <td>{{ row.subject }}</td>
+        <td>{{ row.venuevenuename }}</td>
+        <td>{{ row.appointmentstatusname }}</td>
+        <td>{{ row.timewise_ido }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{{ url_for('settings') }}">Tillbaka till inställningar</a>
+{% endblock %}

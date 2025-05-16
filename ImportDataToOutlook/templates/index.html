@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<br />
+<div class="jumbotron lightbluebg text-center">
+    <h1>Timewise IDO</h1>
+    <p class="lead">IMPORT DATA and display it in OUTLOOK</p>
+</div>
+
+<div class="row text-center">
+    <div class="col-md-4">
+        <i class="fas fa-file-import fa-6x brightlightblueColor"></i>
+        <h2>1. IMPORT</h2>
+        <p>
+            Import Data from Timewise Export Module - use <br /> "Lokal Venue Appointment With Venue".
+        </p>
+
+    </div>
+    <div class="col-md-4 text-center">
+        <i class="fas fa-filter fa-6x brightlightblueColor"></i>
+        <h2>2. DATA</h2>
+        <p>Go to <a href="{{ url_for('settings') }}">SETTINGS</a> and create exports. Paste the export url-string from Timewise. Then manipulate the imported data with filters for date and venue. </p>
+        <p>This software allows an unlimited amount of exports with different filters.</p>
+
+    </div>
+    <div class="col-md-4 text-center">
+        <i class="fas fa-upload fa-6x brightlightblueColor"></i>
+        <h2>3. OUTLOOK</h2>
+        <p>Once you've created the export, simply press the button to download the ical-export and add it into your Outlook.</p>
+        <p>Outlook will now fetch data from Timewise IDO - the data from IDO will be updated towards Timewise for each fetch.</p>
+        <p>The Ical export can be used with every calendar software allowing ical imports.</p>
+    </div>
+</div>
+
+{% endblock %}

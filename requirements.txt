@@ -1,0 +1,7 @@
+Flask>=2.2.3
+requests
+icalendar
+lxml
+waitress
+Flask-SQLAlchemy
+python-dotenv

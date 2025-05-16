@@ -1,0 +1,201 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container">
+	<h2>Create Export</h2>
+	<div id="export-forms">
+		<form method="post" class="export-form">
+			<div class="form-group">
+				<label>Name:</label>
+				<input type="text" name="name" class="form-control" required>
+			</div>
+			<div class="form-group">
+				<label>Import URL:</label>
+				<input type="url" name="import_url" class="form-control import-url" required>
+			</div>
+			<div class="form-group">
+				<label>Months Back:</label>
+				<input type="number" name="months_back" min="0" value="0" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Months Forward:</label>
+				<input type="number" name="months_forward" min="0" value="0" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Venue (hold Ctrl to select multiple):</label>
+				<select name="venues" multiple size="5" class="form-control venues-select">
+					<option disabled>Enter Import URL and leave the field to load venues...</option>
+				</select>
+			</div>
+			<button type="submit" class="btn btn-primary">Save Export</button>
+		</form>
+	</div>
+
+	<h2 style="margin-top:40px;">Saved Exports</h2>
+	<ul class="list-group">
+		{% for export in exports %}
+		<li class="list-group-item">
+			<strong>{{ export.name }}</strong> <!--({{ export.import_url }})--><br>
+			<small>
+				{% if export.venues %}
+				{{ export.venues.split(',')|join(', ') }}
+				{% else %}
+				None selected
+				{% endif %}
+			</small>
+			<button type="button" class="btn btn-xs btn-info pull-right edit-btn"
+					data-id="{{ export.id }}"
+					data-name="{{ export.name }}"
+					data-url="{{ export.import_url }}"
+					data-back="{{ export.months_back }}"
+					data-forward="{{ export.months_forward }}">
+				Edit
+			</button>
+			<a href="{{ url_for('show_export_data', export_id=export.id) }}" class="btn btn-xs btn-success pull-right" style="margin-right: 5px;">
+				Show Data
+			</a>
+			<a href="{{ url_for('calendar_export', export_id=export.id) }}" class="btn btn-xs btn-warning pull-right" style="margin-right: 5px;">
+				Fetch Calendar Export
+			</a>
+
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+
+<!-- Edit Modal -->
+<div class="modal fade" tabindex="-1" id="editModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form id="edit-form" method="post" action="/settings">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Edit Export</h4>
+				</div>
+				<div class="modal-body">
+					<input type="hidden" name="edit_id" id="edit_id">
+					<div class="form-group">
+						<label>Name:</label>
+						<input type="text" name="name" id="edit_name" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label>Import URL:</label>
+						<input type="url" name="import_url" id="edit_import_url" class="form-control import-url" required>
+					</div>
+					<div class="form-group">
+						<label>Months Back:</label>
+						<input type="number" name="months_back" id="edit_months_back" min="0" class="form-control">
+					</div>
+					<div class="form-group">
+						<label>Months Forward:</label>
+						<input type="number" name="months_forward" id="edit_months_forward" min="0" class="form-control">
+					</div>
+					<div class="form-group">
+						<label>Venue (hold Ctrl to select multiple):</label>
+						<select name="venues" id="edit_venues" multiple size="5" class="form-control venues-select">
+							<option disabled>Enter Import URL and leave the field to load venues...</option>
+						</select>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-primary">Save changes</button>
+					<button type="button" class="btn btn-danger" id="delete-export-btn">Delete</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				</div>
+			</form>
+			<!-- Hidden delete form -->
+			<form id="delete-form" method="post" style="display:none;"></form>
+		</div>
+	</div>
+</div>
+
+<script>
+	// Helper function to fetch venues from XML and populate the select element
+	function loadVenues(url, selectElem, selectedVenues) {
+		if (!url) {
+			selectElem.innerHTML = '<option disabled>No URL provided</option>';
+			return;
+		}
+		selectElem.innerHTML = '<option disabled>Loading venues...</option>';
+		fetch('/get_venues_from_xml', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({ url: url })
+		})
+			.then(response => response.json())
+			.then(data => {
+				selectElem.innerHTML = '';
+				if (data.venues && data.venues.length > 0) {
+					data.venues.forEach(function (venue) {
+						var opt = document.createElement('option');
+						opt.value = venue;
+						opt.textContent = venue;
+						if (selectedVenues && selectedVenues.includes(venue)) {
+							opt.selected = true;
+						}
+						selectElem.appendChild(opt);
+					});
+				} else {
+					var opt = document.createElement('option');
+					opt.disabled = true;
+					opt.textContent = 'No venues found';
+					selectElem.appendChild(opt);
+				}
+			});
+	}
+
+	// Create Export Form: Load venues dynamically when Import URL loses focus
+	document.querySelector('.export-form .import-url').addEventListener('blur', function () {
+		var url = this.value;
+		var select = document.querySelector('.export-form .venues-select');
+		loadVenues(url, select);
+	});
+
+	// Edit Modal Logic: Load venues for the selected export and show the modal
+	document.querySelectorAll('.edit-btn').forEach(btn => {
+		btn.addEventListener('click', function () {
+			document.getElementById('edit_id').value = this.dataset.id;
+			document.getElementById('edit_name').value = this.dataset.name;
+			document.getElementById('edit_import_url').value = this.dataset.url;
+			document.getElementById('edit_months_back').value = this.dataset.back;
+			document.getElementById('edit_months_forward').value = this.dataset.forward;
+
+			// Fetch selected venues for this export and populate the select
+			var url = this.dataset.url;
+			var select = document.getElementById('edit_venues');
+			fetch('/get_export_venues/' + this.dataset.id)
+				.then(response => response.json())
+				.then(data => {
+					var selectedVenues = data.venues || [];
+					loadVenues(url, select, selectedVenues);
+					$('#editModal').modal('show');
+				});
+		});
+	});
+
+	// Simple client-side validation for modal form
+	document.getElementById('edit-form').addEventListener('submit', function (e) {
+		var name = document.getElementById('edit_name').value.trim();
+		var url = document.getElementById('edit_import_url').value.trim();
+		if (!name || !url) {
+			alert('Name and Import is required.');
+			e.preventDefault();
+			return false;
+		}
+	});
+
+	// Delete logic inside the edit modal
+	document.getElementById('delete-export-btn').addEventListener('click', function () {
+		var exportId = document.getElementById('edit_id').value;
+		var exportName = document.getElementById('edit_name').value;
+		if (confirm('Are you sure you want to delete "' + exportName + '"?')) {
+			var deleteForm = document.getElementById('delete-form');
+			deleteForm.action = '/delete_export/' + exportId;
+			deleteForm.method = 'post';
+			deleteForm.submit();
+		}
+	});
+</script>
+
+{% endblock %}
