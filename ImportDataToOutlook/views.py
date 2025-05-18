@@ -8,6 +8,8 @@ from ImportDataToOutlook import app, db
 from ImportDataToOutlook.models import ExportSetting
 import requests
 from lxml import etree
+from flask import session
+import os
 
 @app.before_request
 def create_tables():
@@ -46,6 +48,8 @@ def about():
 
 @app.route('/settings', methods=['GET', 'POST'])
 def settings():
+    if not session.get('settings_authenticated'):
+        return redirect(url_for('settings_login'))
     venues = []
     sample_url = request.args.get('sample_url')
     if sample_url:
@@ -256,3 +260,19 @@ def calendar_export(export_id):
 
     return Response(ics_content, mimetype='text/calendar')
 
+@app.route('/settings_login', methods=['GET', 'POST'])
+def settings_login():
+    if request.method == 'POST':
+        password = request.form.get('password')
+        if password == os.getenv('SETTINGS_PASSWORD'):
+            session['settings_authenticated'] = True
+            return redirect(url_for('settings'))
+        else:
+            flash('Incorrect password.', 'danger')
+    return render_template('settings_login.html')
+
+@app.route('/settings_logout')
+def settings_logout():
+    session.pop('settings_authenticated', None)
+    flash('Logged out.', 'info')
+    return redirect(url_for('settings_login'))

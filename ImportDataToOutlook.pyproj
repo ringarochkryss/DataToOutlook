@@ -49,6 +49,7 @@
     </Content>
     <Content Include=".gitignore" />
     <Content Include="ImportDataToOutlook\templates\settings.html" />
+    <Content Include="ImportDataToOutlook\templates\settings_login.html" />
     <Content Include="ImportDataToOutlook\templates\show_export_data.html" />
     <Content Include="requirements.txt" />
     <Content Include="ImportDataToOutlook\static\content\bootstrap.css" />
