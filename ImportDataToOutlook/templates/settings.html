@@ -55,7 +55,7 @@
 			<a href="{{ url_for('show_export_data', export_id=export.id) }}" class="btn btn-xs btn-success pull-right" style="margin-right: 5px;">
 				Show Data
 			</a>
-			<a href="{{ url_for('calendar_export', export_id=export.id) }}" class="btn btn-xs btn-warning pull-right" style="margin-right: 5px;">
+			<a href="{{ url_for('calendar_export', export_id=export.id, _external=True) }}" class="btn btn-xs btn-warning pull-right" style="margin-right: 5px;">
 				Fetch Calendar Export
 			</a>
 
