@@ -199,6 +199,28 @@
 			deleteForm.submit();
 		}
 	});
+
+	// Kopiera iCal-URL till urklipp och visa alert
+	document.querySelectorAll('.copy-ical-link').forEach(function (btn) {
+		btn.addEventListener('click', function (e) {
+			e.preventDefault();
+			var url = btn.getAttribute('data-ical-url');
+			if (navigator.clipboard) {
+				navigator.clipboard.writeText(url).then(function () {
+					alert('Länken har kopierats till urklipp!\n\nKlistra in den i din kalenderprenumeration.');
+				});
+			} else {
+				// Fallback för äldre webbläsare
+				var tempInput = document.createElement('input');
+				tempInput.value = url;
+				document.body.appendChild(tempInput);
+				tempInput.select();
+				document.execCommand('copy');
+				document.body.removeChild(tempInput);
+				alert('Länken har kopierats till urklipp!\n\nKlistra in den i din kalenderprenumeration.');
+			}
+		});
+	});
 </script>
 
 {% endblock %}
