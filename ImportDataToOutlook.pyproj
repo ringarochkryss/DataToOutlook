@@ -57,6 +57,7 @@
     <Content Include="ImportDataToOutlook\templates\settings.html" />
     <Content Include="ImportDataToOutlook\templates\settings_login.html" />
     <Content Include="ImportDataToOutlook\templates\show_export_data.html" />
+    <Content Include="Procfile" />
     <Content Include="requirements.txt" />
     <Content Include="ImportDataToOutlook\static\content\bootstrap.css" />
     <Content Include="ImportDataToOutlook\static\content\bootstrap.min.css" />
@@ -85,6 +86,7 @@
     <Content Include="ImportDataToOutlook\templates\index.html" />
     <Content Include="ImportDataToOutlook\templates\layout.html" />
     <Content Include="ImportDataToOutlook\static\site.webmanifest" />
+    <Content Include="runtime.txt" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
