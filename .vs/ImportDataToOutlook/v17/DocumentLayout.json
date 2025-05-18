@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{2ADF8597-C9C4-4D3F-92EF-CFBD5DD3AD48}|ImportDataToOutlook.pyproj|solutionrelative:ImportDataToOutlook\\templates\\settings.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2ADF8597-C9C4-4D3F-92EF-CFBD5DD3AD48}|ImportDataToOutlook.pyproj|C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\ImportDataToOutlook\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{2ADF8597-C9C4-4D3F-92EF-CFBD5DD3AD48}|ImportDataToOutlook.pyproj|solutionrelative:ImportDataToOutlook\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2ADF8597-C9C4-4D3F-92EF-CFBD5DD3AD48}|ImportDataToOutlook.pyproj|C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\.python-version||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{2ADF8597-C9C4-4D3F-92EF-CFBD5DD3AD48}|ImportDataToOutlook.pyproj|solutionrelative:.python-version||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -25,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2ADF8597-C9C4-4D3F-92EF-CFBD5DD3AD48}|ImportDataToOutlook.pyproj|C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\ImportDataToOutlook\\templates\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2ADF8597-C9C4-4D3F-92EF-CFBD5DD3AD48}|ImportDataToOutlook.pyproj|solutionrelative:ImportDataToOutlook\\templates\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2ADF8597-C9C4-4D3F-92EF-CFBD5DD3AD48}|ImportDataToOutlook.pyproj|C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\ImportDataToOutlook\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{2ADF8597-C9C4-4D3F-92EF-CFBD5DD3AD48}|ImportDataToOutlook.pyproj|solutionrelative:ImportDataToOutlook\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2ADF8597-C9C4-4D3F-92EF-CFBD5DD3AD48}|ImportDataToOutlook.pyproj|C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\ImportDataToOutlook\\__init__.py||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -62,11 +62,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 489,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": ".env",
               "DocumentMoniker": "C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\.env",
               "RelativeDocumentMoniker": ".env",
@@ -79,8 +79,16 @@
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": ".python-version",
               "DocumentMoniker": "C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\.python-version",
               "RelativeDocumentMoniker": ".python-version",
@@ -93,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Procfile",
               "DocumentMoniker": "C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\Procfile",
               "RelativeDocumentMoniker": "Procfile",
@@ -105,24 +113,8 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "layout.html",
               "DocumentMoniker": "C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\ImportDataToOutlook\\templates\\layout.html",
               "RelativeDocumentMoniker": "ImportDataToOutlook\\templates\\layout.html",
@@ -132,10 +124,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-05-15T20:31:15.977Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Document",
@@ -158,7 +146,7 @@
               "RelativeDocumentMoniker": "ImportDataToOutlook\\templates\\settings.html",
               "ToolTip": "C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\ImportDataToOutlook\\templates\\settings.html",
               "RelativeToolTip": "ImportDataToOutlook\\templates\\settings.html",
-              "ViewState": "AgIAAMAAAAAAAAAAAAAcwN4AAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAcwMwAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-05-15T15:04:15.559Z",
               "EditorCaption": ""
@@ -178,7 +166,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "views.py",
+              "DocumentMoniker": "C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\ImportDataToOutlook\\views.py",
+              "RelativeDocumentMoniker": "ImportDataToOutlook\\views.py",
+              "ToolTip": "C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\ImportDataToOutlook\\views.py",
+              "RelativeToolTip": "ImportDataToOutlook\\views.py",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAhwGoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-05-15T13:30:50.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\ImportDataToOutlook\\templates\\index.html",
               "RelativeDocumentMoniker": "ImportDataToOutlook\\templates\\index.html",
@@ -216,23 +221,6 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "views.py",
-              "DocumentMoniker": "C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\ImportDataToOutlook\\views.py",
-              "RelativeDocumentMoniker": "ImportDataToOutlook\\views.py",
-              "ToolTip": "C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\ImportDataToOutlook\\views.py",
-              "RelativeToolTip": "ImportDataToOutlook\\views.py",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-05-15T13:30:50.668Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "settings_login.html",
@@ -266,7 +254,19 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:4:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:7:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:8:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             }
           ]
         }

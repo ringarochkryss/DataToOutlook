@@ -200,7 +200,7 @@
 		}
 	});
 
-	// Kopiera iCal-URL till urklipp och visa alert
+	// copy iCal-URL till clipboard and show alert
 	document.querySelectorAll('.copy-ical-link').forEach(function (btn) {
 		btn.addEventListener('click', function (e) {
 			e.preventDefault();
@@ -210,7 +210,7 @@
 					alert('Länken har kopierats till urklipp!\n\nKlistra in den i din kalenderprenumeration.');
 				});
 			} else {
-				// Fallback för äldre webbläsare
+				// Fallback for old browsers
 				var tempInput = document.createElement('input');
 				tempInput.value = url;
 				document.body.appendChild(tempInput);
