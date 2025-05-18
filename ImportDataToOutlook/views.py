@@ -14,6 +14,7 @@ import os
 @app.before_request
 def create_tables():
     # Ensure all database tables are created before the first request
+    # Don't run Timewise when running this app, it doesn't work when Open VPN GUI is running! 
     db.create_all()
 
 @app.route('/')

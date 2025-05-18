@@ -48,6 +48,12 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include=".gitignore" />
+    <Content Include="ImportDataToOutlook\static\android-chrome-192x192.png" />
+    <Content Include="ImportDataToOutlook\static\android-chrome-512x512.png" />
+    <Content Include="ImportDataToOutlook\static\apple-touch-icon.png" />
+    <Content Include="ImportDataToOutlook\static\favicon-16x16.png" />
+    <Content Include="ImportDataToOutlook\static\favicon-32x32.png" />
+    <Content Include="ImportDataToOutlook\static\favicon.ico" />
     <Content Include="ImportDataToOutlook\templates\settings.html" />
     <Content Include="ImportDataToOutlook\templates\settings_login.html" />
     <Content Include="ImportDataToOutlook\templates\show_export_data.html" />
@@ -78,6 +84,7 @@
     <Content Include="ImportDataToOutlook\templates\contact.html" />
     <Content Include="ImportDataToOutlook\templates\index.html" />
     <Content Include="ImportDataToOutlook\templates\layout.html" />
+    <Content Include="ImportDataToOutlook\static\site.webmanifest" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
