@@ -86,7 +86,7 @@
     <Content Include="ImportDataToOutlook\templates\index.html" />
     <Content Include="ImportDataToOutlook\templates\layout.html" />
     <Content Include="ImportDataToOutlook\static\site.webmanifest" />
-    <Content Include="runtime.txt" />
+    <Content Include=".python-version" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
