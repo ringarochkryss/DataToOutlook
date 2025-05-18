@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2ADF8597-C9C4-4D3F-92EF-CFBD5DD3AD48}|ImportDataToOutlook.pyproj|C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\runtime.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{2ADF8597-C9C4-4D3F-92EF-CFBD5DD3AD48}|ImportDataToOutlook.pyproj|solutionrelative:runtime.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{2ADF8597-C9C4-4D3F-92EF-CFBD5DD3AD48}|ImportDataToOutlook.pyproj|C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\.python-version||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{2ADF8597-C9C4-4D3F-92EF-CFBD5DD3AD48}|ImportDataToOutlook.pyproj|solutionrelative:.python-version||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2ADF8597-C9C4-4D3F-92EF-CFBD5DD3AD48}|ImportDataToOutlook.pyproj|C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -81,13 +81,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "runtime.txt",
-              "DocumentMoniker": "C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\runtime.txt",
-              "RelativeDocumentMoniker": "runtime.txt",
-              "ToolTip": "C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\runtime.txt",
-              "RelativeToolTip": "runtime.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "Title": ".python-version",
+              "DocumentMoniker": "C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\.python-version",
+              "RelativeDocumentMoniker": ".python-version",
+              "ToolTip": "C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\.python-version",
+              "RelativeToolTip": ".python-version",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-05-18T21:47:28.921Z",
               "EditorCaption": ""
             },
@@ -122,19 +122,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\ImportDataToOutlook\\templates\\index.html",
-              "RelativeDocumentMoniker": "ImportDataToOutlook\\templates\\index.html",
-              "ToolTip": "C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\ImportDataToOutlook\\templates\\index.html",
-              "RelativeToolTip": "ImportDataToOutlook\\templates\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-15T20:31:03.691Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "layout.html",
               "DocumentMoniker": "C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\ImportDataToOutlook\\templates\\layout.html",
@@ -144,19 +131,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-05-15T20:31:15.977Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "contact.html",
-              "DocumentMoniker": "C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\ImportDataToOutlook\\templates\\contact.html",
-              "RelativeDocumentMoniker": "ImportDataToOutlook\\templates\\contact.html",
-              "ToolTip": "C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\ImportDataToOutlook\\templates\\contact.html",
-              "RelativeToolTip": "ImportDataToOutlook\\templates\\contact.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-16T16:46:50.269Z",
               "EditorCaption": ""
             },
             {
@@ -175,6 +149,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "contact.html",
+              "DocumentMoniker": "C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\ImportDataToOutlook\\templates\\contact.html",
+              "RelativeDocumentMoniker": "ImportDataToOutlook\\templates\\contact.html",
+              "ToolTip": "C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\ImportDataToOutlook\\templates\\contact.html",
+              "RelativeToolTip": "ImportDataToOutlook\\templates\\contact.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-16T16:46:50.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\ImportDataToOutlook\\templates\\index.html",
+              "RelativeDocumentMoniker": "ImportDataToOutlook\\templates\\index.html",
+              "ToolTip": "C:\\Users\\petra\\source\\repos\\ImportDataToOutlook\\ImportDataToOutlook\\templates\\index.html",
+              "RelativeToolTip": "ImportDataToOutlook\\templates\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-15T20:31:03.691Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
