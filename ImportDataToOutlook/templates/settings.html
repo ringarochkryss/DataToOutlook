@@ -207,7 +207,7 @@
 			var url = btn.getAttribute('data-ical-url');
 			if (navigator.clipboard) {
 				navigator.clipboard.writeText(url).then(function () {
-					alert('Länken har kopierats till urklipp!\n\nKlistra in den i din kalenderprenumeration.');
+					alert('Ical har kopierats till urklipp!\n\nKlistra in den i din kalenderprenumeration.');
 				});
 			} else {
 				// Fallback for old browsers
@@ -217,7 +217,7 @@
 				tempInput.select();
 				document.execCommand('copy');
 				document.body.removeChild(tempInput);
-				alert('Länken har kopierats till urklipp!\n\nKlistra in den i din kalenderprenumeration.');
+				alert('Ical har kopierats till urklipp!\n\nKlistra in den i din kalenderprenumeration.');
 			}
 		});
 	});
