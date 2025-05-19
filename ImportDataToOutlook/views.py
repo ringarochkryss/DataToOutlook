@@ -242,20 +242,24 @@ def calendar_export(export_id):
 
     # Generate ICS content
     ics_lines = [
-        "BEGIN:VCALENDAR",
-        "VERSION:2.0",
-        "PRODID:-//YourApp//EN"
-    ]
-    for row in filtered_rows:
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//YourApp//EN"
+]
+    now_utc = datetime.utcnow().strftime('%Y%m%dT%H%M%SZ')
+    for idx, row in enumerate(filtered_rows):
+        uid = f"{row['starttime'].strftime('%Y%m%dT%H%M%S')}-{idx}@yourapp"
         ics_lines.extend([
-            "BEGIN:VEVENT",
-            f"DTSTART:{row['starttime'].strftime('%Y%m%dT%H%M%S')}",
-            f"DTEND:{row['endtime'].strftime('%Y%m%dT%H%M%S')}",
-            f"SUMMARY:{row['activityname'] or row['subject'] or 'Event'}",
-            f"LOCATION:{row['venuevenuename']}",
-            f"DESCRIPTION:{row['appointmentstatusname']}",
-            "END:VEVENT"
-        ])
+        "BEGIN:VEVENT",
+        f"UID:{uid}",
+        f"DTSTAMP:{now_utc}",
+        f"DTSTART:{row['starttime'].strftime('%Y%m%dT%H%M%S')}",
+        f"DTEND:{row['endtime'].strftime('%Y%m%dT%H%M%S')}",
+        f"SUMMARY:{row['activityname'] or row['subject'] or 'Event'}",
+        f"LOCATION:{row['venuevenuename']}",
+        f"DESCRIPTION:{row['appointmentstatusname']}",
+        "END:VEVENT"
+    ])
     ics_lines.append("END:VCALENDAR")
     ics_content = "\r\n".join(ics_lines)
 

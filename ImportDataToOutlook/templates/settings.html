@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+﻿{% extends "layout.html" %}
 
 {% block content %}
 
@@ -36,7 +36,7 @@
 	<ul class="list-group">
 		{% for export in exports %}
 		<li class="list-group-item">
-			<strong>{{ export.name }}</strong> <!--({{ export.import_url }})--><br>
+			<strong>{{ export.name }}</strong><br>
 			<small>
 				{% if export.venues %}
 				{{ export.venues.split(',')|join(', ') }}
@@ -61,10 +61,25 @@
 			   data-ical-url="{{ url_for('calendar_export', export_id=export.id, _external=True) }}">
 				Copy Calendar Link
 			</a>
-
+			<br>
+			<small>
+				iCal-URL: <a href="{{ url_for('calendar_export', export_id=export.id, _external=True) }}" target="_blank">
+					{{ url_for('calendar_export', export_id=export.id, _external=True) }}
+				</a>
+			</small>
 		</li>
 		{% endfor %}
 	</ul>
+</div>
+
+<div class="container lightbluebg" style="margin-top:30px;">
+	<div class="alert alert-info">
+		<strong>Subscribe to the calendar in Outlook:</strong><br />
+		1. Click <b>Copy Calendar Link</b> for the export you want to subscribe to.<br />
+		2. Go to Outlook &rarr; Add calendar &rarr; Subscribe from web.<br />
+		3. Paste the link and give the calendar a name.<br />
+		4. Save – you will now automatically receive all updates!
+	</div>
 </div>
 
 <!-- Edit Modal -->
@@ -200,27 +215,28 @@
 		}
 	});
 
-	// copy iCal-URL till clipboard and show alert
+	// Copy iCal URL to clipboard and show alert
 	document.querySelectorAll('.copy-ical-link').forEach(function (btn) {
 		btn.addEventListener('click', function (e) {
 			e.preventDefault();
 			var url = btn.getAttribute('data-ical-url');
 			if (navigator.clipboard) {
 				navigator.clipboard.writeText(url).then(function () {
-					alert('Ical har kopierats till urklipp!\n\nKlistra in den i din kalenderprenumeration.');
+					alert('The link has been copied to the clipboard!\n\nPaste it into Outlook under "Subscribe from web".');
 				});
 			} else {
-				// Fallback for old browsers
+				// Fallback for older browsers
 				var tempInput = document.createElement('input');
 				tempInput.value = url;
 				document.body.appendChild(tempInput);
 				tempInput.select();
 				document.execCommand('copy');
 				document.body.removeChild(tempInput);
-				alert('Ical har kopierats till urklipp!\n\nKlistra in den i din kalenderprenumeration.');
+				alert('The link has been copied to the clipboard!\n\nPaste it into Outlook under "Subscribe from web".');
 			}
 		});
 	});
+
 </script>
 
 {% endblock %}
